@@ -5,8 +5,8 @@ function Whale(){
     this.show = function(){
         fill(255);
         rectMode(CENTER);
-        rect(this.x, height-20,20,60);
-        image(docker, this.x - 50,height-122,140,140);
+        rect(this.x, height-20,20,20);
+        image(docker, this.x - 37,height-68,80,80);
     }
     this.move = function(dir){
         this.x += this.xdir*5;

@@ -17,8 +17,8 @@ function setup(){
   createCanvas(windowWidth,windowHeight);
   textFont(font);
   whale = new Whale();
-  for(var i=0;i<8;i++){
-    clouds[i] = new Cloud(i*80+80,80,0,true);
+  for(var i=0;i<4;i++){
+    clouds[i] = new Cloud(i*40,80,0,true);
   }
 }
 function draw(){
@@ -46,7 +46,7 @@ function draw(){
   for(var i=0;i<clouds.length;i++){
     clouds[i].show();
     clouds[i].move();
-    if(clouds[i].y > height-122){
+    if(clouds[i].y > height-70){
       state = STATE_GAME_OVER_PLAY_AGAIN;
       animationFrame = 0;
     }
@@ -78,16 +78,16 @@ function draw(){
     background(0);
     fill(255);
     textSize(15);
-    text('GAME OVER', windowWidth/2 - 160,windowHeight/2 - 250);
-    text('SCORE: ' + score, windowWidth/2 - 160,windowHeight/2 - 210);
+    text('GAME OVER', windowWidth/2 - 60,windowHeight/2 - 200);
+    text('SCORE: ' + score, windowWidth/2 - 60,windowHeight/2 - 170);
     // if(tally == clouds.length){
     //   text('YOU GOT EM ALL!!!', windowWidth/2 - 160,windowHeight/2 - 120);
     // }
 
   }
   if (animationFrame == 0) {
-      text('PLAY AGAIN', windowWidth/2 - 160,windowHeight/2 - 160);
-      image(img2,windowWidth/2 - 220,windowHeight/2 - 50,150,150);
+      text('PLAY AGAIN', windowWidth/2 - 70,windowHeight/2 - 130);
+      image(img2,windowWidth/2 - 90,windowHeight/2 - 50,170,170);
   }
 }
 

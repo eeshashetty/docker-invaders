@@ -1,7 +1,7 @@
 function Cloud(x,y,count,burst){
     this.x = x*2;
     this.y = y;
-    this.r = 40;
+    this.r = 20;
     this.xdir = 1;
     this.count = count;
     this.burst = burst;
@@ -21,11 +21,11 @@ function Cloud(x,y,count,burst){
             noStroke();
             fill(255,255,255,250);
             ellipse(this.x, this.y,this.r*2, this.r*2);
-            ellipse(this.x + 30, this.y + 20, this.r, this.r);
-            ellipse(this.x + 30, this.y + 10, this.r*1.2, this.r*1.2);
-            ellipse(this.x - 30, this.y - 20, this.r, this.r);
-            ellipse(this.x + 20, this.y - 30, this.r/2, this.r/2);
-            ellipse(this.x - 30, this.y + 15, this.r*1.2, this.r*1.2);
+            ellipse(this.x + 15, this.y + 10, this.r, this.r);
+            ellipse(this.x + 15, this.y + 10, this.r*1.2, this.r*1.2);
+            ellipse(this.x - 15, this.y - 10, this.r, this.r);
+            ellipse(this.x + 10, this.y - 15, this.r/2, this.r/2);
+            ellipse(this.x - 15, this.y + 8, this.r*1.2, this.r*1.2);
         }
     }
 }
